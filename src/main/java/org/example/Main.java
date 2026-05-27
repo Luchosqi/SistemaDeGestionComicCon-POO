@@ -17,7 +17,7 @@ public class Main {
 
         // --- SECCIÓN DE PRUEBAS ---
         // Ej: agregar personas a categorías, meter miembros a la agrupación, montar el panel y llamar a mostrarInformacion().
-//sbadkdbskaasafdf
+//sbadkdbskaasafdfadsd
 
     }
 }
