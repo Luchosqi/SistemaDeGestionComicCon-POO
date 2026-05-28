@@ -23,9 +23,9 @@ public class Agrupacion {
     }
 
     public void mostrarInformacion() {
-        System.out.println("=== AGRUPACIÓN ===");
+        System.out.println(" AGRUPACION ");
         System.out.println("Grupo: " + nombreGrupo);
-        System.out.println("Categoría principal:");
+        System.out.println("Categoria principal:");
         categoriaPrincipal.mostrarInformacion();    }
 
     // Getters y Setters
