@@ -15,15 +15,29 @@ public class Panel {
     }
 
     public void agregarPanelista(Object panelista) {
-        // TODO: Completar lógica método (n ,mnkjndebe validar si es instancia de Persona o Agrupacion antes de añadir)
+        if (panelista instanceof Persona || panelista instanceof Agrupacion) {
+            panelistas.add(panelista);
+        } else {
+            System.out.println("Error: Solo se pueden agregar Personas o Agrupaciones.");
+        }
     }
 
     public void eliminarPanelista(Object panelista) {
-        // TODO: Completar lógica método
+        panelistas.remove(panelista);
     }
 
     public void mostrarInformacion() {
-        // TODO: Completar lógica método (mostrar hora, tema/categoría y quiénes exponen)
+        System.out.println("Categoria: "+categoria.getNombre()
+                + "\n Hora presentacion: "+horaPresentacion+
+                "\n Panelistas: " +panelistas);
+            for (Object p : panelistas) {
+                if (p instanceof Persona){
+                    ((Persona) p).getNombre();
+                } else if (p instanceof Agrupacion) {
+                    ((Agrupacion)p).getMiembros();
+                }
+            }
+
     }
 
     // Getters y Setters

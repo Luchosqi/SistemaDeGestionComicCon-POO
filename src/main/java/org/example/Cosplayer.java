@@ -25,4 +25,12 @@ public class Cosplayer extends Persona implements Interactivable {
     public void setCantidadTrajes(int cantidadTrajes) { this.cantidadTrajes = cantidadTrajes; }
     public EstiloCosplay getEstiloPreferido() { return estiloPreferido; }
     public void setEstiloPreferido(EstiloCosplay estiloPreferido) { this.estiloPreferido = estiloPreferido; }
+
+    @Override
+    public String toString() {
+        return "Cosplayer: " + getNombre()
+                + " | Estilo: " + estiloPreferido
+                + " | Trajes: " + cantidadTrajes;
+    }
 }
+

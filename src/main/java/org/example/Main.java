@@ -15,6 +15,8 @@ public class Main {
         Agrupacion comunidadAnime = new Agrupacion("Team Otaku UFRO", animeCat);
         Panel panelPrincipal = new Panel(animeCat, "15:30 hrs");
 
+        panelPrincipal.agregarPanelista(cosplayer1);
+        panelPrincipal.mostrarInformacion();
         // --- SECCIÓN DE PRUEBAS ---
         // Ej: agregar personas a categorías, meter miembros a la agrupación, montar el panel y llamar a mostrarInformacion().
 

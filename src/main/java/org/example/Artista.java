@@ -21,8 +21,26 @@ public class Artista extends Persona implements Interactivable {
     }
 
     // Getters y Setters
-    public String getMarcaTableta() { return marcaTableta; }
-    public void setMarcaTableta(String marcaTableta) { this.marcaTableta = marcaTableta; }
-    public int getCantidadArtbooksPublicados() { return cantidadArtbooksPublicados; }
-    public void setCantidadArtbooksPublicados(int cantidadArtbooksPublicados) { this.cantidadArtbooksPublicados = cantidadArtbooksPublicados; }
+    public String getMarcaTableta() {
+        return marcaTableta;
+    }
+
+    public void setMarcaTableta(String marcaTableta) {
+        this.marcaTableta = marcaTableta;
+    }
+
+    public int getCantidadArtbooksPublicados() {
+        return cantidadArtbooksPublicados;
+    }
+
+    public void setCantidadArtbooksPublicados(int cantidadArtbooksPublicados) {
+        this.cantidadArtbooksPublicados = cantidadArtbooksPublicados;
+    }
+
+    @Override
+    public String toString() {
+        return "Artista: " + getNombre()
+                + " | Tableta: " + marcaTableta           // propio → directo
+                + " | Artbooks: " + cantidadArtbooksPublicados; // propio → directo
+    }
 }
