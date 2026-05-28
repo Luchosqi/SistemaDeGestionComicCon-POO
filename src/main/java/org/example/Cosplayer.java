@@ -12,17 +12,52 @@ public class Cosplayer extends Persona implements Interactivable {
 
     @Override
     public void mostrarInformacion() {
-        // TODO: Completar lógica método (imprimir datos base de Persona y específicos de Cosplayer)
+        System.out.println("COSPLAYER");
+        System.out.println("Nombre       : " + nombre);
+        System.out.println("Pais de origen: " + paisOrigen);
+        System.out.println("Edad         : " + edad + " años");
+        System.out.println("Estilo       : " + estiloPreferido);
+        System.out.println("Trajes       : " + cantidadTrajes);
+        System.out.print("Categorías   : ");
+        for (Categoria c : categorias) {
+            System.out.print(c.getNombre() + " ");
+
+        }
     }
 
     @Override
     public void realizarPresentacion() {
-        // TODO: Completar lógica método (simular presentación e imprimir tiempo estimado de preparación)
+        int tiempoEstimado = 30 + (cantidadTrajes - 1) * 15;
+        System.out.println(" PRESENTACIÓN DE COSPLAYER ");
+        System.out.println(nombre + " realiza su presentacion con estilo " + estiloPreferido);
+        System.out.println("Tiempo estimado de preparación: " + tiempoEstimado + " minutos");
+        System.out.println("Cuenta con " + cantidadTrajes + " traje(s) para el evento");
     }
 
+
     // Getters y Setters
-    public int getCantidadTrajes() { return cantidadTrajes; }
-    public void setCantidadTrajes(int cantidadTrajes) { this.cantidadTrajes = cantidadTrajes; }
-    public EstiloCosplay getEstiloPreferido() { return estiloPreferido; }
-    public void setEstiloPreferido(EstiloCosplay estiloPreferido) { this.estiloPreferido = estiloPreferido; }
+    public int getCantidadTrajes() {
+        return cantidadTrajes;
+    }
+
+    public void setCantidadTrajes(int cantidadTrajes) {
+        this.cantidadTrajes = cantidadTrajes;
+    }
+
+    public EstiloCosplay getEstiloPreferido() {
+        return estiloPreferido;
+    }
+
+    public void setEstiloPreferido(EstiloCosplay estiloPreferido) {
+        this.estiloPreferido = estiloPreferido;
+    }
+
+    @Override
+    public String toString() {
+        return "Cosplayer: " + getNombre()
+                + " | Estilo: " + estiloPreferido
+                + " | Trajes: " + cantidadTrajes;
+    }
 }
+
+

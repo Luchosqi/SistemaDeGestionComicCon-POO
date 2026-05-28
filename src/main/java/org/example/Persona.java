@@ -19,14 +19,13 @@ public abstract class Persona {
 
     // Métodos de negocio a completar por el estudiante
     public void agregarCategoria(Categoria categoria) {
-        // TODO: Completar lógica método (añadir la categoría a la lista)
+            categorias.add(categoria);
     }
 
     public void eliminarCategoria(Categoria categoria) {
-        // TODO: Completar lógica método (remover la categoría de la lista)
+        categorias.remove(categoria);
     }
 
-    // Método abstracto obligatorio para las subclases
     public abstract void mostrarInformacion();
 
     // Getters y Setters básicos
